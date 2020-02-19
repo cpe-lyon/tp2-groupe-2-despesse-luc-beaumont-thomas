@@ -50,7 +50,18 @@ La variable existe bien car elle est devenu une variable d'environnement, contra
 
 **7. Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace. Afficher la valeur de NOMS pour vérifier que l’affectation est correcte.**
 
+Création de la variable d'environnement:
+
+`export NOMS="Thomas Luc"`
+
+Affichage du contenu de la variable:
+
+`echo $NOMS`
+
+L'affectation est correcte.
+
 **8. Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.**
+
 
 **9. Quelle différence y a-t-il entre donner une valeur vide à une variable et l’utilisation de la commande unset ?**
 
