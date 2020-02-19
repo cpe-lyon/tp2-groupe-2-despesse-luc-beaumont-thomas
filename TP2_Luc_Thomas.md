@@ -129,12 +129,21 @@ do
 done
 ```
 
-**Il affichera un message d’erreur dans le cas contraire.**
 
 # Exercice 4. Contrôle d’utilisateur
 
 **Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation : nom_du_script nom_utilisateur”, où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)**
 
+```
+#!/bin/bash
+  
+if [ $# != 1 ]
+then
+        echo "Utilisation : $0 nom_utilisateur"
+else
+        grep $1 /etc/passwd
+fi
+```
 # Exercice 5. Factorielle
 
 **Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que l’utilisateur saisit toujours un entier naturel).**
