@@ -2,8 +2,8 @@
 
 **1. Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?**
 
-*/usr/local/sbin
-*/usr/local/bin
+* /usr/local/sbin
+* /usr/local/bin
 */usr/sbin
 */usr/bin
 */sbin
