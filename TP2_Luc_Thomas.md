@@ -16,6 +16,12 @@ votre répertoire personnel ?**
 
 **3. Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.**
 
+*	"LANG" contient la langue sélectionnée pour le système, "fr_FR.UTF-8".
+*	"PWD" contient le chemin du répertoire courant, "/bin".
+*	"OLDPWD" contient le chemin de l'ancien répertoire courant "/fs03/share/users/luc.despesse/home".
+*	"SHELL" contient l'interpréteur de commande utilisateur défini dans "/etc/passwd".
+*	"_" affiche l'emplacement de la commande printenv.
+
 **4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.**
 
 **5. Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin
