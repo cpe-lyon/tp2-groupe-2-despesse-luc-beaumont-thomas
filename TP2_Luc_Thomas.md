@@ -62,17 +62,11 @@ L'affectation est correcte.
 
 **8. Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.**
 
-`echo "Bonjour à vous deux, $NOMS`
 
 **9. Quelle différence y a-t-il entre donner une valeur vide à une variable et l’utilisation de la commande unset ?**
 
-`unset`: supprime la variable d'environnement du système.
-
-"Donner une valeur vide à une variable": Ne la supprime pas mais laisse un contenu vide.
-
 **10. Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre dossier personnel d’après bash)**
 
-`echo '$HOME' = "$HOME"`
 
 ## Programmation Bash
 
@@ -85,14 +79,14 @@ Ajoutez le chemin vers script à votre PATH de manière permanente.**
 **Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.**
 
 `#!/bin/bash
-PASSWORD="admin"
+PASS="inception"
 
-read -p 'Saisissez le mot de passe ' -s mdp
+read -s -p "Entrez le mot de passe : " mdp
 
-if ["$PASSWORD" = "$mdp"]; then
-	echo "Bon mot de passe :)"
-else
-	echo "Mauvais mot de passe :("
+if [ $PASS = $mdp ]; then
+	echo "Mot de passe OK!"
+else 
+	echo "Mot de passe érroné!"
 fi`
 
 # Exercice 3. Expressions rationnelles
