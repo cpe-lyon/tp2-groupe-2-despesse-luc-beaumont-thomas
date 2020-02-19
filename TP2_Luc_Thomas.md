@@ -2,6 +2,13 @@
 
 **1. Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?**
 
+/usr/local/sbin
+/usr/local/bin
+/usr/sbin
+/usr/bin
+/sbin
+/bin 
+
 **2. Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans
 votre répertoire personnel ?**
 
