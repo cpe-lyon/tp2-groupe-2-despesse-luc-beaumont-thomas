@@ -97,7 +97,8 @@ if [ $PASS = $mdp ]; then
 	echo "Mot de passe OK!"
 else 
 	echo "Mot de passe érroné!"
-fi```
+fi
+```
 
 # Exercice 3. Expressions rationnelles
 
