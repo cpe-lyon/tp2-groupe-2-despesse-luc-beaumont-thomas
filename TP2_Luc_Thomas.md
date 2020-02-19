@@ -25,8 +25,11 @@ votre répertoire personnel ?**
 **4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.**
 
 Création de la variable locale:
+
 `MY_VAR="Bonjour"`
-Affichage de la variable:
+
+Affichage de la valeur de la variable:
+
 `echo $MY_VAR`
 
 **5. Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin
