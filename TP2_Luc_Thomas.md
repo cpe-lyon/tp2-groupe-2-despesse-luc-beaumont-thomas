@@ -105,14 +105,29 @@ fi
 
 **Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :
 function is_number()
+**
+#!/bin/bash
+
+```  
+function is_number()
 {
   re='^[+-]?[0-9]+([.][0-9]+)?$'
-    if ! [[ $1 =~ $re ]] ; then
-      return 1
-    else
-      return 0
-    fi
-}**
+  if ! [[ $1 =~ $re ]] ; then
+    return 1
+else return 0
+fi }
+
+for param in $*
+do
+        is_number $param
+        if [ $? = 0 ]
+        then
+                echo "$param est un nombre réel !"
+        else
+                echo "Erreur : $param n'est pas un nombre réel !"
+        fi
+done
+```
 
 **Il affichera un message d’erreur dans le cas contraire.**
 
