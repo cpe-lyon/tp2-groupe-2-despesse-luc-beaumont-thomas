@@ -12,7 +12,7 @@
 **2. Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans
 votre répertoire personnel ?**
 
-
+~
 
 **3. Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.**
 
