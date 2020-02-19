@@ -62,11 +62,17 @@ L'affectation est correcte.
 
 **8. Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS.**
 
+`echo "Bonjour à vous deux, $NOMS`
 
 **9. Quelle différence y a-t-il entre donner une valeur vide à une variable et l’utilisation de la commande unset ?**
 
+`unset`: supprime la variable d'environnement du système.
+
+"Donner une valeur vide à une variable": Ne la supprime pas mais laisse un contenu vide.
+
 **10. Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre dossier personnel d’après bash)**
 
+`echo '$HOME' = "$HOME"`
 
 ## Programmation Bash
 
