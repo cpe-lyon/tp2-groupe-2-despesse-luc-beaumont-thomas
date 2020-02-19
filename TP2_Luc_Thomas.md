@@ -78,7 +78,7 @@ Ajoutez le chemin vers script à votre PATH de manière permanente.**
 
 **Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.**
 
-#!/bin/bash
+`#!/bin/bash
 PASSWORD="admin"
 
 read -p 'Saisissez le mot de passe ' -s mdp
@@ -87,7 +87,7 @@ if ["$PASSWORD" = "$mdp"]; then
 	echo "Bon mot de passe :)"
 else
 	echo "Mauvais mot de passe :("
-fi
+fi`
 
 # Exercice 3. Expressions rationnelles
 
