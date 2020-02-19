@@ -141,7 +141,14 @@ if [ $# != 1 ]
 then
         echo "Utilisation : $0 nom_utilisateur"
 else
-        grep $1 /etc/passwd
+        res=$(grep $1 /etc/passwd)
+
+        if [ -n "$res" ]
+        then
+                echo "L'ulisateur $1 existe."
+        else
+                echo "L'utilisateur n'existe pas."
+        fi
 fi
 ```
 # Exercice 5. Factorielle
