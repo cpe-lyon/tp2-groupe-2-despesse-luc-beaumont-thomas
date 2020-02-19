@@ -12,6 +12,8 @@
 **2. Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans
 votre répertoire personnel ?**
 
+'''$PATH'''
+
 **3. Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.**
 
 **4. Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.**
