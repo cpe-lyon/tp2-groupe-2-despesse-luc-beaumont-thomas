@@ -106,9 +106,9 @@ fi
 **Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre est un nombre réel :
 function is_number()
 **
+```
 #!/bin/bash
-
-```  
+  
 function is_number()
 {
   re='^[+-]?[0-9]+([.][0-9]+)?$'
