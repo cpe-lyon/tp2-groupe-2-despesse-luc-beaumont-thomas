@@ -169,6 +169,27 @@ echo $res
 
 **Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !” selon les cas (vous utiliserez $RANDOM).**
 
+```
+#!/bin/bash
+prix=$(((RANDOM%1000)+1))
+
+devine=-1
+
+while [$devine -ne $prix]
+do
+read devine
+if [$devine -gt $prix]; then
+  echo 'C'est moins !'
+fi
+if [$devine -lt $prix]; then
+  echo 'C'est plus !'
+fi
+done
+
+echo 'Gagné !'
+
+```
+
 # Exercice 7. Statistiques
 
 **1. Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres sont bien des entiers.**
@@ -177,6 +198,89 @@ echo $res
 
 **3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et stockées au fur et à mesure dans un tableau.**
 
-# Exercice 8. Pour les plus rapides
+```
+#!/bin/bash
+function is_number()
+{
+	re='^[+-]?[0-9]+([.][0-9]+)?$'
+	if ! [[ $1 =~ $re ]] ; then
+		return 1
+	else
+		return 0
+	fi
+}
 
-**Écrivez un script qui affiche les combinaisons possibles de couleurs (cf. TP 1) :**
+sum=0
+count=0
+min=$1
+max=$1
+
+while (("$#")); do
+    is_number $1
+    if [[ $? = 1 ]]; then
+        echo Un des paramètres n\'est pas un nombre
+        exit
+    fi
+    sum=$((sum + $1))
+    count=$((count + 1))
+    if [[ $1 -gt $max ]]; then
+        max=$1
+    elif [[ $1 -lt $min ]]; then
+        min=$1
+    fi
+    shift
+done
+
+echo Min: $min
+echo Max: $max
+printf 'Moyenne: %.2f\n' $(echo "$sum / $count" | bc -l)
+
+#!/bin/bash
+function is_number()
+{
+	re='^[+-]?[0-9]+([.][0-9]+)?$'
+	if ! [[ $1 =~ $re ]] ; then
+		return 1
+	else
+		return 0
+	fi
+}
+
+values=()
+input="0"
+index=0
+
+while [ -n "$input" ]; do
+    read -p "Entrez un nombre: " input
+
+    if [ -n "$input" ]; then
+        is_number $input
+        if [[ $? = 1 ]]; then
+            echo Ce n\'est pas un nombre !
+        else
+            values[$index]=$input
+            index=$(( $index + 1 ))
+        fi
+    fi
+done
+
+sum=0
+min=${values[0]}
+max=${values[0]}
+
+for n in ${values[@]}; do
+    sum=$((sum + $n))
+    count=$((count + 1))
+
+    if [[ $n -gt $max ]]; then
+        max=$n
+    elif [[ $n -lt $min ]]; then
+        min=$n
+    fi
+done
+
+echo Min: $min
+echo Max: $max
+printf 'Moyenne: %.2f\n' $(echo "$sum / $index" | bc -l)
+
+```
