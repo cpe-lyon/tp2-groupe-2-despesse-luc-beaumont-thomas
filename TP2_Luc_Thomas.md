@@ -175,13 +175,13 @@ prix=$(((RANDOM%1000)+1))
 
 devine=-1
 
-while [$devine -ne $prix]
+while [ $devine -ne $prix ]
 do
 read devine
-if [$devine -gt $prix]; then
+if [ $devine -gt $prix ]; then
   echo 'C'est moins !'
 fi
-if [$devine -lt $prix]; then
+if [ $devine -lt $prix ]; then
   echo 'C'est plus !'
 fi
 done
